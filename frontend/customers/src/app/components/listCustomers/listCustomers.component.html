@@ -1,0 +1,105 @@
+<div class="container">
+  <h2>Customer Listing</h2>
+  <div class="btn-table-container">
+    <div class="btn-search-container">
+      <button class="btn create" (click)="goToCreate()">Create new customer</button>
+      <input class="search" placeholder="Search customer" name="search" type="text" [(ngModel)]="searchCustomer" />
+    </div>
+
+    <table *ngIf="customers.length != 0">
+      <thead>
+        <tr>
+          <th class="th-cont" (click)="handleSort('firstname')">
+            <div class="th">
+              First Name
+              <div class="icons">
+                <i *ngIf="orderArray[0]==='up'" class="fa-solid fa-caret-up "> </i>
+                <i *ngIf="orderArray[0]==='up'" class="fa-solid fa-caret-down disabled"> </i>
+
+                <i *ngIf="orderArray[0]==='down'" class="fa-solid fa-caret-up disabled"> </i>
+                <i *ngIf="orderArray[0]==='down'" class="fa-solid fa-caret-down"> </i>
+
+                <i *ngIf="orderArray[0]===''" class="fa-solid fa-caret-up disabled"></i>
+                <i *ngIf="orderArray[0]===''" class="fa-solid fa-caret-down disabled"></i>
+              </div>
+            </div>
+          </th>
+          <th class="th-cont" (click)="handleSort('surname')">
+            <div class="th">
+              Surname
+              <div class="icons">
+                <i *ngIf="orderArray[1]==='up'" class="fa-solid fa-caret-up "> </i>
+                <i *ngIf="orderArray[1]==='up'" class="fa-solid fa-caret-down disabled"> </i>
+
+                <i *ngIf="orderArray[1]==='down'" class="fa-solid fa-caret-up disabled"> </i>
+                <i *ngIf="orderArray[1]==='down'" class="fa-solid fa-caret-down"> </i>
+
+                <i *ngIf="orderArray[1]===''" class="fa-solid fa-caret-up disabled"></i>
+                <i *ngIf="orderArray[1]===''" class="fa-solid fa-caret-down disabled"></i>
+              </div>
+            </div>
+          </th>
+          <th class="th-cont" (click)="handleSort('email')">
+            <div class="th">
+              Email
+              <div class="icons">
+                <i *ngIf="orderArray[2]==='up'" class="fa-solid fa-caret-up "> </i>
+                <i *ngIf="orderArray[2]==='up'" class="fa-solid fa-caret-down disabled"> </i>
+
+                <i *ngIf="orderArray[2]==='down'" class="fa-solid fa-caret-up disabled"> </i>
+                <i *ngIf="orderArray[2]==='down'" class="fa-solid fa-caret-down"> </i>
+
+                <i *ngIf="orderArray[2]===''" class="fa-solid fa-caret-up disabled"></i>
+                <i *ngIf="orderArray[2]===''" class="fa-solid fa-caret-down disabled"></i>
+              </div>
+            </div>
+          </th>
+          <th class="th-cont" (click)="handleSort('cellphone')">
+            <div class="th">
+              Cellphone
+              <div class="icons">
+                <i *ngIf="orderArray[3]==='up'" class="fa-solid fa-caret-up "> </i>
+                <i *ngIf="orderArray[3]==='up'" class="fa-solid fa-caret-down disabled"> </i>
+
+                <i *ngIf="orderArray[3]==='down'" class="fa-solid fa-caret-up disabled"> </i>
+                <i *ngIf="orderArray[3]==='down'" class="fa-solid fa-caret-down"> </i>
+
+                <i *ngIf="orderArray[3]===''" class="fa-solid fa-caret-up disabled"></i>
+                <i *ngIf="orderArray[3]===''" class="fa-solid fa-caret-down disabled"></i>
+              </div>
+            </div>
+          </th>
+          <th class="th-cont" (click)="handleSort('invoiceTotal')">
+            <div class="th">
+              Invoice Total
+              <div class="icons">
+                <i *ngIf="orderArray[4]==='up'" class="fa-solid fa-caret-up "> </i>
+                <i *ngIf="orderArray[4]==='up'" class="fa-solid fa-caret-down disabled"> </i>
+
+                <i *ngIf="orderArray[4]==='down'" class="fa-solid fa-caret-up disabled"> </i>
+                <i *ngIf="orderArray[4]==='down'" class="fa-solid fa-caret-down"> </i>
+
+                <i *ngIf="orderArray[4]===''" class="fa-solid fa-caret-up disabled"></i>
+                <i *ngIf="orderArray[4]===''" class="fa-solid fa-caret-down disabled"></i>
+              </div>
+            </div>
+          </th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let customer of customers |filter:searchCustomer|sort:[sortField,order] '>
+          <td>{{customer.firstname}}</td>
+          <td>{{customer.surname}}</td>
+          <td>{{customer.email}}</td>
+          <td>{{customer.cellphone}}</td>
+          <td>{{customer.invoiceTotal}}</td>
+          <td> <a [routerLink]="['view-customer', customer.id]">View | </a> <button class="btn delete"
+              (click)="deleteCustomer(customer.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="customers.length == 0">No customers found!</p>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+*{
+    font-family:'Roboto',sans-serif
+}
+
+.container{
+    display:flex;
+    justify-content:center
+}
+
+.input{
+    display:flex;
+    flex-direction:column;
+    width:15rem;
+    margin:1rem 0;
+}
+
+.btn-group{
+    display:flex;
+    justify-content:space-between;
+}
+
+.btn{
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+    text-transform: uppercase;
+}
+
+.btn.back{
+    background-color: rgba(5, 255, 5, 0.804);
+}
+.btn.save{
+    background-color: rgba(128, 128, 128, 0.502);
+}
+
+input{
+    border: 1px solid grey;
+    border-radius:.5rem;
+    height: 2rem;
+    padding:0 .5rem;
+}

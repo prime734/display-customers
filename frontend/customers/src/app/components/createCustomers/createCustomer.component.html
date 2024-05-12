@@ -1,0 +1,35 @@
+<div>
+  <div class="container">
+    <form #form="ngForm" (ngSubmit)="createCustomer()">
+      <div class="input">
+        <label>First Name</label>
+        <input type='text' [(ngModel)]="createCustomerReq.firstname" name="firstname" />
+      </div>
+
+      <div class="input">
+        <label>Surname</label>
+        <input type='text' [(ngModel)]="createCustomerReq.surname" name="surname" />
+      </div>
+
+      <div class="input">
+        <label>Email</label>
+        <input type='email' [(ngModel)]="createCustomerReq.email" name="email" />
+      </div>
+
+      <div class="input">
+        <label>Cellphone</label>
+        <input type='text' [(ngModel)]="createCustomerReq.cellphone" name="cellphone" />
+      </div>
+
+      <div class="input">
+        <label>Invoice Total</label>
+        <input type='text' [(ngModel)]="createCustomerReq.invoiceTotal" name="invoiceTotal" />
+      </div>
+
+      <div class="btn-group">
+        <button class="btn back" (click)="goToHome()" type="button">Back to list</button>
+        <button class="btn save" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
