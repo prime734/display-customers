@@ -134,3 +134,4 @@ C:\Users\Prime\Desktop\adaptit\backend\customersAPI\customersAPI\obj\Debug\net8.
 C:\Users\Prime\Desktop\adaptit\backend\customersAPI\customersAPI\obj\Debug\net8.0\customersAPI.pdb
 C:\Users\Prime\Desktop\adaptit\backend\customersAPI\customersAPI\obj\Debug\net8.0\customersAPI.genruntimeconfig.cache
 C:\Users\Prime\Desktop\adaptit\backend\customersAPI\customersAPI\obj\Debug\net8.0\ref\customersAPI.dll
+C:\Users\Prime\Desktop\adaptit\backend\customersAPI\customersAPI\obj\Debug\net8.0\customersAPI.sourcelink.json
