@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './createCustomer.component.html',
   styleUrls: ['./createCustomer.component.css'],
 })
+
 export class CreateCustomerComponent implements OnInit {
   createCustomerReq: Customer = {
     id: '',
