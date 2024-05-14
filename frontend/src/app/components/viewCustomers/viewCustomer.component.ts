@@ -17,8 +17,8 @@ export class ViewCustomerComponent implements OnInit {
     firstname:'',
     surname:'',
     email:'',
-    cellphone:0,
-    invoiceTotal:0
+    cellphone:'',
+    invoiceTotal:''
   }
 
   constructor(private route:ActivatedRoute, private customerService:CustomersService, private router:Router) { }

@@ -3,6 +3,6 @@ export interface Customer{
     firstname:string,
     surname:string,
     email:string,
-    cellphone:number,
-    invoiceTotal:number
+    cellphone:string,
+    invoiceTotal:string
 }

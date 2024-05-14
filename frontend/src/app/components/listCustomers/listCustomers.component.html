@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container container-xsm">
   <h2>Customer Listing</h2>
   <div class="btn-table-container">
     <div class="btn-search-container">
-      <button class="btn create" (click)="goToCreate()">Create new customer</button>
+      <button class="btn btn-outline-info" (click)="goToCreate()">Create new customer</button>
       <input class="search" placeholder="Search customer" name="search" type="text" [(ngModel)]="searchCustomer" />
     </div>
 
-    <table *ngIf="customers.length != 0">
+    <table class="table table-striped" *ngIf="customers.length != 0">
       <thead>
         <tr>
-          <th class="th-cont" (click)="handleSort('firstname')">
+          <th scope="col" class="th-cont" (click)="handleSort('firstname')">
             <div class="th">
               First Name
               <div class="icons">

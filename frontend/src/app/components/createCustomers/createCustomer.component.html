@@ -1,33 +1,80 @@
 <div>
   <div class="container">
-    <form #form="ngForm" (ngSubmit)="createCustomer()">
+    <form
+      class="was-validated"
+      novalidate
+      #form="ngForm"
+      (ngSubmit)="createCustomer()"
+    >
       <div class="input">
-        <label>First Name</label>
-        <input type='text' [(ngModel)]="createCustomerReq.firstname" name="firstname" />
+        <label>First Name:</label>
+        <input
+          required
+          placeholder="Optimus"
+          type="text"
+          [(ngModel)]="createCustomerReq.firstname"
+          name="firstname"
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter your name!</div>
       </div>
-
+      
       <div class="input">
-        <label>Surname</label>
-        <input type='text' [(ngModel)]="createCustomerReq.surname" name="surname" />
+        <label>Surname:</label>
+        <input
+        required
+        placeholder="Prime"
+        type="text"
+        [(ngModel)]="createCustomerReq.surname"
+        name="surname"
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter your surname!</div>
       </div>
-
+      
       <div class="input">
-        <label>Email</label>
-        <input type='email' [(ngModel)]="createCustomerReq.email" name="email" />
+        <label>Email:</label>
+        <input
+        required
+        placeholder="prime@gmail.com"
+        type="email"
+        [(ngModel)]="createCustomerReq.email"
+        name="email"
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter your email!</div>
       </div>
-
+      
       <div class="input">
-        <label>Cellphone</label>
-        <input type='text' [(ngModel)]="createCustomerReq.cellphone" name="cellphone" />
+        <label>Cellphone:</label>
+        <input
+        required
+        placeholder="(012) - 345 - 6789"
+        type="text"
+        [(ngModel)]="createCustomerReq.cellphone"
+        name="cellphone"
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter your cellphone number!</div>
       </div>
-
+      
       <div class="input">
-        <label>Invoice Total</label>
-        <input type='text' [(ngModel)]="createCustomerReq.invoiceTotal" name="invoiceTotal" />
+        <label>Invoice Total:</label>
+        <input
+        required
+        placeholder="0.00"
+        type="text"
+        [(ngModel)]="createCustomerReq.invoiceTotal"
+        name="invoiceTotal"
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter amount!</div>
       </div>
 
       <div class="btn-group">
-        <button class="btn back" (click)="goToHome()" type="button">Back to list</button>
+        <button class="btn btn-success" (click)="goToHome()" type="button">
+          Back to list
+        </button>
         <button class="btn save" type="submit">Save</button>
       </div>
     </form>
